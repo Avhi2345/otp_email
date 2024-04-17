@@ -1,0 +1,15 @@
+<!-- appname/templates/my_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Example</title>
+</head>
+<body>
+    <h1>Button Example</h1>
+    <form method="post" action="{% url 'my_view' %}">
+        {% csrf_token %}
+        Enter Mail-Id: <input type="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
